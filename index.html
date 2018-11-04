@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ambient GIF</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:500">
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    
+    <!-- import the YouTube iFrame API -->
+   <script src="https://www.youtube.com/iframe_api" defer></script>
+  </head>  
+  <body>
+    <!--
+
+
+-->
+    
+    <div class="container" id="welcome_view">
+      <iframe id="yt_embed" src="https://www.youtube.com/embed/KI6ZJTSja4s" width="560" height="315"></iframe>
+      <img class="disp-gif-fullscreen" id="bg_gif">
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <h1 class="display-1 text-white">Ambient GIF</h1>
+        </div>
+      </div>
+      <div class="row setup-box py-5">
+        <div class="col-6 mx-auto">
+          <h3 class="text-center mb-4 text-white">Sync a Youtube video to a GIF</h3>
+          <form class="setup-box-config">
+            <div class="form-group">
+              <label id="lbl_gif_url" for="txt_gif_url">
+                <span class="text-white">Enter a GIF URL</span> <span class="error_gif_url text-danger"></span>
+              </label>
+              <input type="text" class="form-control form-control-lg" name="gif_url" placeholder="Your GIF URL..." />
+            </div>
+            <div class="form-group">
+              <label id="lbl_youtube_url" for="txt_youtube_url">
+                <span class="text-white">Enter a Youtube URL</span> <span class="error_youtube_url text-danger"></span>
+              </label>
+              <input type="text" class="form-control form-control-lg" name="youtube_url" placeholder="Your youtube URL..." />
+            </div>
+            <button class="mb-3 btn btn-primary w-100 text-white text-uppercase btn-lg set_configuration_btn">
+              synchronize <i class="fas fa-spinner"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container" id="gif_view">
+      <!--
+
+
+
+-->
+      <img class="disp-gif-fullscreen" id="main_gif" />
+      <div id="yt_embed_container"></div>
+      <a class="mb-3 btn btn-primary text-white text-uppercase btn-lg fullscreen_btn" href="javascript:fullScreenBrowser()">
+          fullscreen (F11) <i class="fas fa-spinner"></i>
+      </a>
+    </div>
+    
+  </body>
+</html>
