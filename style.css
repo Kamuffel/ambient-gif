@@ -1,0 +1,63 @@
+* { margin: 0; padding: 0; }
+
+body {
+  background-color: gray;
+	font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  color: #373fff;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.setup-box {
+  /* background: rgba(255, 255, 255, 0.2);*/
+}
+
+.disp-gif-fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.disp-gif-fullscreen { 
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+
+  -webkit-filter: blur(4px);
+   filter: blur(4px);
+}
+
+
+/* GIF VIEW */
+
+#gif_view {
+  -webkit-filter: none;
+   filter: none;
+  display: none;
+}
+
+/* probably want to change this to background cover somehow, need to lookup the CSS for it */
+#main_gif {
+  width: 100%;
+  height: 100%;
+  filter: none;
+}
+
+#yt_embed {
+  display: none;
+}
+
+#yt_embed_container {
+  display: none;
+}
